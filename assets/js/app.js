@@ -43,8 +43,8 @@ let stdArr =  [
                          <td>${ele.fname} ${ele.lname}</td>
                          <td>${ele.email}</td>
                          <td>${ele.contact}</td>
-                         <td><i onclick="onEdit(this)"  class="fa-solid fa-pen-to-square text-primary"></i></td>
-                         <td><i onclick="onRemove(this)"  class="fa-solid fa-trash text-danger"></i></td>
+                         <td><i onclick="onEdit(this)"  class="fa-solid fa-pen-to-square fa-2x text-primary"></i></td>
+                         <td><i onclick="onRemove(this)"  class="fa-solid fa-trash fa-2x text-danger"></i></td>
                        </tr>`
      });
      stdContainer.innerHTML= res;

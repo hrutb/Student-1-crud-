@@ -1,0 +1,10 @@
+@media(max-width:600px){ 
+    .row{
+      flex-direction:column; 
+
+    }  
+
+ .col-md-8, .col-md-4{ 
+        width:100%;
+ }
+}

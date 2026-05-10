@@ -63,7 +63,7 @@ let stdArr =  [
           stdId:Date.now().toString()
       }
 
-
+stdArr.push(newObj);
       let tr = document.createElement('tr'); 
         tr.id = newObj.stdId ;
         tr.innerHTML =`  <td>${stdArr.length}</td>
@@ -71,8 +71,9 @@ let stdArr =  [
                          <td>${newObj.email}</td>
                          <td>${newObj.contact}</td>
                          <td><i onclick="onEdit(this)"  class="fa-solid fa-pen-to-square  text-primary"></i></td>
-                         <td><i onclick="onRemove(this)"  class="fa-solid fa-trash text-danger"></i></td>
-           ` 
+                          <td><i onclick="onRemove(this)"  class="fa-solid fa-trash text-danger"></i></td>
+                        
+                         ` 
        stdContainer.append(tr);
   }
 
@@ -87,6 +88,11 @@ function onRemove(ele){
       stdArr.splice(getindex,1)
        ele.closest('tr').remove();
   }
+
+
+let alltr = [...document.querySelectorAll('tr')]
+    alltr.forEach((ele,i)=>ele.firstElementChild=i+1);
+
 }
 
  let editId; 
